@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87057CB4212BF47400CF570C /* BaseMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87057CB3212BF47400CF570C /* BaseMainViewController.swift */; };
+		87057CB6212BF49500CF570C /* DordlyMySelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87057CB5212BF49500CF570C /* DordlyMySelfViewController.swift */; };
+		87057CB8212BF4A400CF570C /* DordlyFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87057CB7212BF4A400CF570C /* DordlyFindViewController.swift */; };
+		87057CBA212BF4B300CF570C /* DordlyVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87057CB9212BF4B300CF570C /* DordlyVideoViewController.swift */; };
+		87057CBC212BF4CB00CF570C /* DordlyListenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87057CBB212BF4CB00CF570C /* DordlyListenViewController.swift */; };
+		87057CBE212BF4E000CF570C /* DordlyFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87057CBD212BF4E000CF570C /* DordlyFirstViewController.swift */; };
 		87809E76212A78B500EA7E63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87809E75212A78B500EA7E63 /* AppDelegate.swift */; };
 		87809E78212A78B500EA7E63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87809E77212A78B500EA7E63 /* ViewController.swift */; };
 		87809E7B212A78B500EA7E63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87809E79212A78B500EA7E63 /* Main.storyboard */; };
@@ -15,6 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		87057CB3212BF47400CF570C /* BaseMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMainViewController.swift; sourceTree = "<group>"; };
+		87057CB5212BF49500CF570C /* DordlyMySelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DordlyMySelfViewController.swift; sourceTree = "<group>"; };
+		87057CB7212BF4A400CF570C /* DordlyFindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DordlyFindViewController.swift; sourceTree = "<group>"; };
+		87057CB9212BF4B300CF570C /* DordlyVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DordlyVideoViewController.swift; sourceTree = "<group>"; };
+		87057CBB212BF4CB00CF570C /* DordlyListenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DordlyListenViewController.swift; sourceTree = "<group>"; };
+		87057CBD212BF4E000CF570C /* DordlyFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DordlyFirstViewController.swift; sourceTree = "<group>"; };
 		87809E72212A78B500EA7E63 /* XiMaLaYaSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiMaLaYaSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87809E75212A78B500EA7E63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87809E77212A78B500EA7E63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +47,109 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87057CB1212BF3FD00CF570C /* FiftyPage */ = {
+			isa = PBXGroup;
+			children = (
+				87057CB5212BF49500CF570C /* DordlyMySelfViewController.swift */,
+			);
+			path = FiftyPage;
+			sourceTree = "<group>";
+		};
+		87057CB2212BF46100CF570C /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				87057CB3212BF47400CF570C /* BaseMainViewController.swift */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		87217380212BF2E10079B7BD /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		87217381212BF2E90079B7BD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		87217382212BF2EC0079B7BD /* FrameWork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FrameWork;
+			sourceTree = "<group>";
+		};
+		87217383212BF2EF0079B7BD /* ThirdLibrary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdLibrary;
+			sourceTree = "<group>";
+		};
+		87217384212BF2F10079B7BD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		87217386212BF3280079B7BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		87217388212BF3430079B7BD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				87057CB2212BF46100CF570C /* MainPage */,
+				87057CB1212BF3FD00CF570C /* FiftyPage */,
+				8721738E212BF3930079B7BD /* FourPage */,
+				8721738B212BF36D0079B7BD /* ThirdPage */,
+				8721738D212BF3840079B7BD /* SecondPage */,
+				87217389212BF3550079B7BD /* FirstPage */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		87217389212BF3550079B7BD /* FirstPage */ = {
+			isa = PBXGroup;
+			children = (
+				87057CBD212BF4E000CF570C /* DordlyFirstViewController.swift */,
+			);
+			path = FirstPage;
+			sourceTree = "<group>";
+		};
+		8721738B212BF36D0079B7BD /* ThirdPage */ = {
+			isa = PBXGroup;
+			children = (
+				87057CB9212BF4B300CF570C /* DordlyVideoViewController.swift */,
+			);
+			path = ThirdPage;
+			sourceTree = "<group>";
+		};
+		8721738D212BF3840079B7BD /* SecondPage */ = {
+			isa = PBXGroup;
+			children = (
+				87057CBB212BF4CB00CF570C /* DordlyListenViewController.swift */,
+			);
+			path = SecondPage;
+			sourceTree = "<group>";
+		};
+		8721738E212BF3930079B7BD /* FourPage */ = {
+			isa = PBXGroup;
+			children = (
+				87057CB7212BF4A400CF570C /* DordlyFindViewController.swift */,
+			);
+			path = FourPage;
+			sourceTree = "<group>";
+		};
 		87809E69212A78B500EA7E63 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +169,13 @@
 		87809E74212A78B500EA7E63 /* XiMaLaYaSwift */ = {
 			isa = PBXGroup;
 			children = (
+				87217386212BF3280079B7BD /* Model */,
+				87217388212BF3430079B7BD /* ViewController */,
+				87217384212BF2F10079B7BD /* ViewModel */,
+				87217383212BF2EF0079B7BD /* ThirdLibrary */,
+				87217382212BF2EC0079B7BD /* FrameWork */,
+				87217381212BF2E90079B7BD /* Common */,
+				87217380212BF2E10079B7BD /* Util */,
 				87809E87212A78EE00EA7E63 /* Other */,
 				87809E79212A78B500EA7E63 /* Main.storyboard */,
 				87809E7C212A78B600EA7E63 /* Assets.xcassets */,
@@ -143,8 +265,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87057CBA212BF4B300CF570C /* DordlyVideoViewController.swift in Sources */,
+				87057CBC212BF4CB00CF570C /* DordlyListenViewController.swift in Sources */,
+				87057CB6212BF49500CF570C /* DordlyMySelfViewController.swift in Sources */,
 				87809E78212A78B500EA7E63 /* ViewController.swift in Sources */,
+				87057CB4212BF47400CF570C /* BaseMainViewController.swift in Sources */,
 				87809E76212A78B500EA7E63 /* AppDelegate.swift in Sources */,
+				87057CB8212BF4A400CF570C /* DordlyFindViewController.swift in Sources */,
+				87057CBE212BF4E000CF570C /* DordlyFirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
