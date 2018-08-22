@@ -13,6 +13,8 @@
 		87057CBA212BF4B300CF570C /* DordlyVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87057CB9212BF4B300CF570C /* DordlyVideoViewController.swift */; };
 		87057CBC212BF4CB00CF570C /* DordlyListenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87057CBB212BF4CB00CF570C /* DordlyListenViewController.swift */; };
 		87057CBE212BF4E000CF570C /* DordlyFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87057CBD212BF4E000CF570C /* DordlyFirstViewController.swift */; };
+		8727B2DC212D3B8B008CF9B9 /* DordlyFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8727B2DB212D3B8B008CF9B9 /* DordlyFirstView.swift */; };
+		8727B2DE212D3D3B008CF9B9 /* BaseMainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8727B2DD212D3D3B008CF9B9 /* BaseMainTabBarViewController.swift */; };
 		87809E76212A78B500EA7E63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87809E75212A78B500EA7E63 /* AppDelegate.swift */; };
 		87809E78212A78B500EA7E63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87809E77212A78B500EA7E63 /* ViewController.swift */; };
 		87809E7B212A78B500EA7E63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87809E79212A78B500EA7E63 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 		87057CB9212BF4B300CF570C /* DordlyVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DordlyVideoViewController.swift; sourceTree = "<group>"; };
 		87057CBB212BF4CB00CF570C /* DordlyListenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DordlyListenViewController.swift; sourceTree = "<group>"; };
 		87057CBD212BF4E000CF570C /* DordlyFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DordlyFirstViewController.swift; sourceTree = "<group>"; };
+		8727B2DB212D3B8B008CF9B9 /* DordlyFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DordlyFirstView.swift; sourceTree = "<group>"; };
+		8727B2DD212D3D3B008CF9B9 /* BaseMainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMainTabBarViewController.swift; sourceTree = "<group>"; };
 		87809E72212A78B500EA7E63 /* XiMaLaYaSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiMaLaYaSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87809E75212A78B500EA7E63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87809E77212A78B500EA7E63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				87057CB3212BF47400CF570C /* BaseMainViewController.swift */,
+				8727B2DD212D3D3B008CF9B9 /* BaseMainTabBarViewController.swift */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -94,6 +99,11 @@
 		87217384212BF2F10079B7BD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8727B2DA212D3B73008CF9B9 /* FiftView */,
+				8727B2D9212D3B6B008CF9B9 /* FourView */,
+				8727B2D8212D3B64008CF9B9 /* ThirdView */,
+				8727B2D7212D3B5C008CF9B9 /* SecondView */,
+				8727B2D6212D3B4D008CF9B9 /* FirstView */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -148,6 +158,42 @@
 				87057CB7212BF4A400CF570C /* DordlyFindViewController.swift */,
 			);
 			path = FourPage;
+			sourceTree = "<group>";
+		};
+		8727B2D6212D3B4D008CF9B9 /* FirstView */ = {
+			isa = PBXGroup;
+			children = (
+				8727B2DB212D3B8B008CF9B9 /* DordlyFirstView.swift */,
+			);
+			path = FirstView;
+			sourceTree = "<group>";
+		};
+		8727B2D7212D3B5C008CF9B9 /* SecondView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SecondView;
+			sourceTree = "<group>";
+		};
+		8727B2D8212D3B64008CF9B9 /* ThirdView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdView;
+			sourceTree = "<group>";
+		};
+		8727B2D9212D3B6B008CF9B9 /* FourView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FourView;
+			sourceTree = "<group>";
+		};
+		8727B2DA212D3B73008CF9B9 /* FiftView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FiftView;
 			sourceTree = "<group>";
 		};
 		87809E69212A78B500EA7E63 = {
@@ -266,10 +312,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				87057CBA212BF4B300CF570C /* DordlyVideoViewController.swift in Sources */,
+				8727B2DC212D3B8B008CF9B9 /* DordlyFirstView.swift in Sources */,
 				87057CBC212BF4CB00CF570C /* DordlyListenViewController.swift in Sources */,
 				87057CB6212BF49500CF570C /* DordlyMySelfViewController.swift in Sources */,
 				87809E78212A78B500EA7E63 /* ViewController.swift in Sources */,
 				87057CB4212BF47400CF570C /* BaseMainViewController.swift in Sources */,
+				8727B2DE212D3D3B008CF9B9 /* BaseMainTabBarViewController.swift in Sources */,
 				87809E76212A78B500EA7E63 /* AppDelegate.swift in Sources */,
 				87057CB8212BF4A400CF570C /* DordlyFindViewController.swift in Sources */,
 				87057CBE212BF4E000CF570C /* DordlyFirstViewController.swift in Sources */,
