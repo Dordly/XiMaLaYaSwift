@@ -1,0 +1,6 @@
+framework module Pods_XiMaLaYaSwift {
+  umbrella header "Pods-XiMaLaYaSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

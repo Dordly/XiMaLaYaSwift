@@ -40,12 +40,12 @@ class BaseMainTabBarViewController: UITabBarController {
         self.setUpChildController(childVc: DordlyMySelfViewController(), norImage: UIImage(named:"JCScanNormal")!, selImage: UIImage(named: "JCScanSelected")!, title: "我的")
     }
     private func setUpChildController(childVc:UIViewController,norImage:UIImage,selImage:UIImage,title:String){
-//        let nav = UINavigationController(rootViewController: childVc)
-//        nav.navigationBar.barTintColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 1)
-//        nav.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-//        nav.navigationBar.tintColor = UIColor.white
-        childVc.tabBarItem = UITabBarItem(title: title, image: norImage.withRenderingMode(.alwaysOriginal), selectedImage: selImage.withRenderingMode(.alwaysOriginal))
-        self.addChildViewController(childVc)
+        let nav = UINavigationController(rootViewController: childVc)
+        nav.navigationBar.barTintColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 1)
+        nav.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        nav.navigationBar.tintColor = UIColor.white
+        nav.tabBarItem = UITabBarItem(title: title, image: norImage.withRenderingMode(.alwaysOriginal), selectedImage: selImage.withRenderingMode(.alwaysOriginal))
+        self.addChildViewController(nav)
     }
 
 }
