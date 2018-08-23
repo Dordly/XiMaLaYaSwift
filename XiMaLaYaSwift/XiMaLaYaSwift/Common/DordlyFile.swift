@@ -16,9 +16,18 @@ let KScreenW =  UIScreen.main.bounds.size.width
 public func colorWithRGB(_ r:CGFloat,g:CGFloat,b:CGFloat)->UIColor{
     return UIColor(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: 1)
 }
+//图片
+public func Img(name:NSString) ->UIImage {
+    return UIImage.init(named: name as String)!
+}
 //应用主颜色值
 let MainColor = colorWithRGB(190,g:107,b: 49)
 //主标题
 let MainTitleColor = UIColor.black
 //副标题
 let MainTwoTitleColor = colorWithRGB(153,g:153,b: 153)
+//背景色
+let MainBgColor = UIColor.white
+//透明色
+let MainClearColor = UIColor.clear
+
