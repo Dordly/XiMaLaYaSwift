@@ -20,7 +20,8 @@ class DordlyFirstViewController: UIViewController {
     
     var headerScrollView = UIScrollView()
     var bottomScrollView = UIScrollView()
-    
+    var firstView = DordlyFirstView()
+    var blackVC = UIView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,11 +81,12 @@ class DordlyFirstViewController: UIViewController {
     }
     //点击展示可选栏
     @objc func changeBtClick() {
-        UIView .animate(withDuration: 0.5) {
-            
-        }
+        self.blackVC = initWithPublicView(superView: (self.navigationController?.view)!, mainColor: UIColor.black)
+        self.blackVC.alpha = 0.7
+        self.firstView = DordlyFirstView.init(frame: CGRect.init(x: 0, y: navHeight, width: SCREEN_WIDTH, height: 220))
+        self.firstView.firstViewDelegate = self
+        self.navigationController?.view .addSubview(self.firstView)
     }
-    
     private lazy var pageTitleView: MFPageTitleView = {
         let config = MFPageTitleViewConfig()
         config.titleColor = colorWithRGB(43, g: 43, b: 43)
@@ -110,11 +112,17 @@ class DordlyFirstViewController: UIViewController {
         return pageContentView
     }()
 }
-extension DordlyFirstViewController: MFPageTitleViewDelegate, MFPageContentViewDelegate {
+extension DordlyFirstViewController: MFPageTitleViewDelegate, MFPageContentViewDelegate,DordlyFirstViewDelegate {
+    func selectedIndex(pageTitleView: DordlyFirstView, selectedIndex: Int) {
+//        self.firstView .removeFromSuperview()
+//        self.blackVC .removeFromSuperview()
+    }
+    
     func selectedIndexInPageTitleView(pageTitleView: MFPageTitleView, selectedIndex: Int) {
         self.pageContentView.setPageContentViewCurrentIndex(currentIndex: selectedIndex)
     }
     func pageContentViewScroll(progress: CGFloat, originalIndex: Int, targetIndex: Int) {
         self.pageTitleView.setPageTitleView(progress: progress, originalIndex: originalIndex, targetIndex: targetIndex)
     }
+    
 }
