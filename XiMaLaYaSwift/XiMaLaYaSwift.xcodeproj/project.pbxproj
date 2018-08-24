@@ -17,6 +17,11 @@
 		8722CBF8212E563F007D2CE5 /* ValigateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8722CBF7212E563F007D2CE5 /* ValigateView.swift */; };
 		8727B2DC212D3B8B008CF9B9 /* DordlyFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8727B2DB212D3B8B008CF9B9 /* DordlyFirstView.swift */; };
 		8727B2DE212D3D3B008CF9B9 /* BaseMainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8727B2DD212D3D3B008CF9B9 /* BaseMainTabBarViewController.swift */; };
+		87657E4B212FAE63003EE419 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87657E47212FAE62003EE419 /* UIView+Extension.swift */; };
+		87657E4C212FAE63003EE419 /* MFPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87657E48212FAE62003EE419 /* MFPageContentView.swift */; };
+		87657E4D212FAE63003EE419 /* MFPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87657E49212FAE62003EE419 /* MFPageTitleView.swift */; };
+		87657E4E212FAE63003EE419 /* MFPageTitleViewConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87657E4A212FAE62003EE419 /* MFPageTitleViewConfig.swift */; };
+		87657E50212FB689003EE419 /* DordlyFirstHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87657E4F212FB689003EE419 /* DordlyFirstHeaderCell.swift */; };
 		87809E76212A78B500EA7E63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87809E75212A78B500EA7E63 /* AppDelegate.swift */; };
 		87809E78212A78B500EA7E63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87809E77212A78B500EA7E63 /* ViewController.swift */; };
 		87809E7B212A78B500EA7E63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87809E79212A78B500EA7E63 /* Main.storyboard */; };
@@ -36,6 +41,11 @@
 		8722CBF7212E563F007D2CE5 /* ValigateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValigateView.swift; sourceTree = "<group>"; };
 		8727B2DB212D3B8B008CF9B9 /* DordlyFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DordlyFirstView.swift; sourceTree = "<group>"; };
 		8727B2DD212D3D3B008CF9B9 /* BaseMainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMainTabBarViewController.swift; sourceTree = "<group>"; };
+		87657E47212FAE62003EE419 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		87657E48212FAE62003EE419 /* MFPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFPageContentView.swift; sourceTree = "<group>"; };
+		87657E49212FAE62003EE419 /* MFPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFPageTitleView.swift; sourceTree = "<group>"; };
+		87657E4A212FAE62003EE419 /* MFPageTitleViewConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFPageTitleViewConfig.swift; sourceTree = "<group>"; };
+		87657E4F212FB689003EE419 /* DordlyFirstHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DordlyFirstHeaderCell.swift; sourceTree = "<group>"; };
 		87809E72212A78B500EA7E63 /* XiMaLaYaSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XiMaLaYaSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87809E75212A78B500EA7E63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87809E77212A78B500EA7E63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +106,7 @@
 		87217381212BF2E90079B7BD /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				87657E46212FAE62003EE419 /* PageTitleView */,
 				8722CBF5212E4B12007D2CE5 /* DordlyFile.swift */,
 				8722CBF7212E563F007D2CE5 /* ValigateView.swift */,
 			);
@@ -152,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				87057CBD212BF4E000CF570C /* DordlyFirstViewController.swift */,
+				87657E4F212FB689003EE419 /* DordlyFirstHeaderCell.swift */,
 			);
 			path = FirstPage;
 			sourceTree = "<group>";
@@ -214,6 +226,17 @@
 			children = (
 			);
 			path = FiftView;
+			sourceTree = "<group>";
+		};
+		87657E46212FAE62003EE419 /* PageTitleView */ = {
+			isa = PBXGroup;
+			children = (
+				87657E47212FAE62003EE419 /* UIView+Extension.swift */,
+				87657E48212FAE62003EE419 /* MFPageContentView.swift */,
+				87657E49212FAE62003EE419 /* MFPageTitleView.swift */,
+				87657E4A212FAE62003EE419 /* MFPageTitleViewConfig.swift */,
+			);
+			path = PageTitleView;
 			sourceTree = "<group>";
 		};
 		87809E69212A78B500EA7E63 = {
@@ -385,17 +408,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				87057CBA212BF4B300CF570C /* DordlyVideoViewController.swift in Sources */,
+				87657E4B212FAE63003EE419 /* UIView+Extension.swift in Sources */,
 				8722CBF6212E4B12007D2CE5 /* DordlyFile.swift in Sources */,
 				8727B2DC212D3B8B008CF9B9 /* DordlyFirstView.swift in Sources */,
 				87057CBC212BF4CB00CF570C /* DordlyListenViewController.swift in Sources */,
 				87057CB6212BF49500CF570C /* DordlyMySelfViewController.swift in Sources */,
+				87657E4D212FAE63003EE419 /* MFPageTitleView.swift in Sources */,
+				87657E4C212FAE63003EE419 /* MFPageContentView.swift in Sources */,
 				87809E78212A78B500EA7E63 /* ViewController.swift in Sources */,
+				87657E4E212FAE63003EE419 /* MFPageTitleViewConfig.swift in Sources */,
 				87057CB4212BF47400CF570C /* BaseMainViewController.swift in Sources */,
 				8727B2DE212D3D3B008CF9B9 /* BaseMainTabBarViewController.swift in Sources */,
 				87809E76212A78B500EA7E63 /* AppDelegate.swift in Sources */,
 				8722CBF8212E563F007D2CE5 /* ValigateView.swift in Sources */,
 				87057CB8212BF4A400CF570C /* DordlyFindViewController.swift in Sources */,
 				87057CBE212BF4E000CF570C /* DordlyFirstViewController.swift in Sources */,
+				87657E50212FB689003EE419 /* DordlyFirstHeaderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

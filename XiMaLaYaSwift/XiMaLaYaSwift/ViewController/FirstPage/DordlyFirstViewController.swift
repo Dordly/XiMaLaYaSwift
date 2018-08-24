@@ -16,6 +16,7 @@ class DordlyFirstViewController: UIViewController {
     var loadBt = UIButton()//历史记录
     var centerNewBt = UIButton()//消息中心
     var searchView = UITextField()//搜索
+    var topContentArray = NSArray()
     
     var headerScrollView = UIScrollView()
     var bottomScrollView = UIScrollView()
@@ -24,8 +25,11 @@ class DordlyFirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = MainBgColor
+        topContentArray = ["分类","推荐","VIP","直播","小说","广播","儿童","精品","段子","音乐","相声","历史","人文","情感","英语"]
         self.MainNavigationBar()
         self.createMainView()
+        self.view.addSubview(pageTitleView)
+        self.view.addSubview(pageContentView)
     }
     //自定义NavigationBar
     public func MainNavigationBar() {
@@ -38,8 +42,7 @@ class DordlyFirstViewController: UIViewController {
         searchView = initWithPubliTextField(superView: mainView, bgColor: MainClearColor, placeholderStr: "搜索专辑，主播，广播，声音", font: UIFont.boldSystemFont(ofSize: 12), alignment: NSTextAlignment.left, textColor: MainTitleColor)
         searchView.layer.masksToBounds = true
         searchView.layer.cornerRadius = 20
-        //创建阴影
-        searchView.borderStyle = UITextBorderStyle.none
+        
         //历史记录
         loadBt = initWithPublicButton(superView: mainView, normalImage: Img(name: "load"), selectedImage: Img(name: "load"), bgColor: MainClearColor, titleNormalColor: MainClearColor, titleSelectedColor: MainClearColor, titleFont: UIFont.boldSystemFont(ofSize: 14), titleStr: "记录", slignment: UIControlContentHorizontalAlignment.center)
         //下载
@@ -67,22 +70,51 @@ class DordlyFirstViewController: UIViewController {
         }
     }
     private func createMainView() {
-        
-        headerScrollView = UIScrollView.init()
-        headerScrollView.backgroundColor = MainBgColor
-        self.view .addSubview(headerScrollView)
-        headerScrollView.snp.makeConstraints { (make) in
-            make.top.left.right.equalTo(view)
-            make.height.equalTo(45)
+        let changeBt = initWithPublicButton(superView: self.view, normalImage: Img(name: "change_down"), selectedImage: Img(name: "change_down"), bgColor: MainBgColor, titleNormalColor: MainClearColor, titleSelectedColor: MainClearColor, titleFont: UIFont.boldSystemFont(ofSize: 12), titleStr: "选中", slignment: UIControlContentHorizontalAlignment.center)
+        changeBt .addTarget(self, action: #selector(changeBtClick), for: UIControlEvents.touchUpInside)
+        changeBt.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view.snp.top).offset(navHeight)
+            make.height.width.equalTo(45)
+            make.right.equalTo(self.view.snp.right)
+        }
+    }
+    //点击展示可选栏
+    @objc func changeBtClick() {
+        UIView .animate(withDuration: 0.5) {
+            
+        }
+    }
+    
+    private lazy var pageTitleView: MFPageTitleView = {
+        let config = MFPageTitleViewConfig()
+        config.titleColor = colorWithRGB(43, g: 43, b: 43)
+        config.titleSelectedColor = colorWithRGB(211, g: 0, b: 0)
+        config.titleFont = UIFont.boldSystemFont(ofSize: 14)
+        config.indicatorColor = colorWithRGB(211, g: 0, b: 0)
+        let pageTitleView = MFPageTitleView(frame: CGRect(x: 0, y: navHeight, width: SCREEN_WIDTH-45, height: 45), titles: ["分类","推荐","VIP","直播","小说","广播","儿童","精品","段子","音乐","相声","历史","人文","情感","英语"], config: config)
+        pageTitleView.pageTitleViewDelegate = self
+        return pageTitleView
+    }()
+    
+    private lazy var pageContentView: MFPageContentView = {
+        var childControllers = [UIViewController]()
+        for _ in 0..<topContentArray.count {
+            let vc = UIViewController()
+            vc.view.backgroundColor = MainBgColor
+            childControllers.append(vc)
         }
         
-        bottomScrollView = UIScrollView.init()
-        bottomScrollView.backgroundColor = MainBgColor
-        self.view.addSubview(bottomScrollView)
-        bottomScrollView.snp.makeConstraints { (make) in
-            make.top.left.right.equalTo(headerScrollView)
-            make.bottom.equalTo(view)
-        }
-        
+        let pageContentViewY = pageTitleView.frame.maxY
+        let pageContentView = MFPageContentView(frame: CGRect(x: 0, y: pageContentViewY, width: SCREEN_WIDTH, height: SCREEN_HEIGHT-pageContentViewY), parentVC: self, childVCs: childControllers)
+        pageContentView.pageContentViewDelegate = self
+        return pageContentView
+    }()
+}
+extension DordlyFirstViewController: MFPageTitleViewDelegate, MFPageContentViewDelegate {
+    func selectedIndexInPageTitleView(pageTitleView: MFPageTitleView, selectedIndex: Int) {
+        self.pageContentView.setPageContentViewCurrentIndex(currentIndex: selectedIndex)
+    }
+    func pageContentViewScroll(progress: CGFloat, originalIndex: Int, targetIndex: Int) {
+        self.pageTitleView.setPageTitleView(progress: progress, originalIndex: originalIndex, targetIndex: targetIndex)
     }
 }
