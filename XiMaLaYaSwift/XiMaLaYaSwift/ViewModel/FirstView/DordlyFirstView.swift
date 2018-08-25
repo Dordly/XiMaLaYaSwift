@@ -18,16 +18,6 @@ class DordlyFirstView: UIView {
     
     weak var firstViewDelegate: DordlyFirstViewDelegate?
     
-    //block 反向传值
-//    typealias SelectBlock = (Int)->()
-//    var selectBlock:SelectBlock?
-//
-//    var mSelect_index : Int = 0 {
-//        //该值已经变化后，刷新collectionView
-//        didSet {
-//            collectionView?.reloadData()
-//        }
-//    }
     override init(frame: CGRect) {
         super.init(frame: frame)
         changeArray = NSMutableArray.init()
@@ -71,26 +61,31 @@ extension DordlyFirstView : UICollectionViewDelegate,UICollectionViewDataSource 
         cell.titleBt.tag = indexPath.item
         if changeArray[indexPath.item] as! String == "1" {
             cell.titleBt.backgroundColor = MainColor
+            cell.titleBt .setTitleColor(MainBgColor, for: .normal)
             changeArray .replaceObject(at: indexPath.item, with: "1")
         }else{
             cell.titleBt.backgroundColor = MainBgColor
+            cell.titleBt .setTitleColor(MainTwoTitleColor, for: .normal)
             changeArray .replaceObject(at: indexPath.item, with: "0")
         }
         cell.titleBt.addTarget(self, action: #selector(BtClick(sender:)), for: .touchUpInside)
         return cell
         
     }
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        changeArray .replaceObject(at: indexPath.row, with: "1")
-//        firstViewDelegate?.selectedIndex(pageTitleView: self, selectedIndex: indexPath.row)
-//        collectionView.reloadData()
-//    }
     
     @objc func BtClick(sender:UIButton) {
         print(sender.tag)
         sender.isSelected = !sender.isSelected
         if sender.isSelected == true {
-            changeArray .replaceObject(at: sender.tag, with: "1")
+            for i in 0...changeArray.count-1 {
+                if i == sender.tag {
+                    changeArray .replaceObject(at: sender.tag, with: "1")
+                }else{
+                    changeArray .replaceObject(at: i, with: "0")
+                }
+            }
+        }else{
+            changeArray .replaceObject(at: sender.tag, with: "0")
         }
         collectionView?.reloadData()
         firstViewDelegate?.selectedIndex(pageTitleView: self, selectedIndex: sender.tag)

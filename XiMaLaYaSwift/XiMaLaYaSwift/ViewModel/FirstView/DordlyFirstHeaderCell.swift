@@ -18,7 +18,6 @@ class DordlyFirstHeaderCell: UICollectionViewCell {
         
         titleBt = UIButton.init()
         titleBt .setTitle("分类", for: .normal)
-        titleBt .setTitleColor(MainColor, for: .selected)
         titleBt.setTitleColor(MainTwoTitleColor, for: .normal)
         titleBt.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
         titleBt.backgroundColor = MainBgColor

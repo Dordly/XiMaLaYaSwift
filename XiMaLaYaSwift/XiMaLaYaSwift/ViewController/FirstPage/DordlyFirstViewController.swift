@@ -81,11 +81,12 @@ class DordlyFirstViewController: UIViewController {
     }
     //点击展示可选栏
     @objc func changeBtClick() {
-        self.blackVC = initWithPublicView(superView: (self.navigationController?.view)!, mainColor: UIColor.black)
+        self.blackVC = initWithPublicView(superView: UIApplication.shared.keyWindow!, mainColor: UIColor.black)
+        self.blackVC.frame = CGRect.init(x: 0, y: navHeight, width: SCREEN_WIDTH, height: SCREEN_HEIGHT-navHeight)
         self.blackVC.alpha = 0.7
         self.firstView = DordlyFirstView.init(frame: CGRect.init(x: 0, y: navHeight, width: SCREEN_WIDTH, height: 220))
         self.firstView.firstViewDelegate = self
-        self.navigationController?.view .addSubview(self.firstView)
+        UIApplication.shared.keyWindow!.addSubview(self.firstView)
     }
     private lazy var pageTitleView: MFPageTitleView = {
         let config = MFPageTitleViewConfig()
@@ -114,9 +115,11 @@ class DordlyFirstViewController: UIViewController {
 }
 extension DordlyFirstViewController: MFPageTitleViewDelegate, MFPageContentViewDelegate,DordlyFirstViewDelegate {
     func selectedIndex(pageTitleView: DordlyFirstView, selectedIndex: Int) {
-//        self.firstView .removeFromSuperview()
-//        self.blackVC .removeFromSuperview()
+        self.firstView .removeFromSuperview()
+        self.blackVC .removeFromSuperview()
+        self.pageContentView.setPageContentViewCurrentIndex(currentIndex: selectedIndex)
     }
+    
     
     func selectedIndexInPageTitleView(pageTitleView: MFPageTitleView, selectedIndex: Int) {
         self.pageContentView.setPageContentViewCurrentIndex(currentIndex: selectedIndex)
